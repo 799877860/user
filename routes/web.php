@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('user/reg','User\IndexController@reg');      // 注册
+Route::get('user/login','User\IndexController@login');      // 登录
+Route::get('user/data','User\IndexController@getData');     // 获取数据

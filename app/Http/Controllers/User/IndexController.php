@@ -14,15 +14,15 @@ class IndexController extends Controller
     public function reg()
     {
         $reg_info = [
-            'name'  => 'zhangsan33',          // 用户名
-            'email' => 'zhangsan33@qq.com',
-            'mobile'    => '13312344321',
-            'pass1'     => '1234567',
-            'pass2'     => '1234567',
+            'name'  => '坤小',          // 用户名
+            'email' => 'kunxiao@qq.com',
+            'mobile'    => '13613714757',
+            'pass1'     => '123123',
+            'pass2'     => '123123',
         ];
         //echo __METHOD__;die;
         //请求passport 注册接口
-        $url = 'http://passport.1905.com/api/user/reg';
+        $url = 'http://passport.1905.com/user/reg';
         $response = CommonModel::curlPost($url,$reg_info);
         echo '<pre>';print_r($response);echo '</pre>';
     }
@@ -33,11 +33,11 @@ class IndexController extends Controller
     public function login()
     {
         $login_info = [
-            'name'  => 'zhangsan33',
-            'pass'  => '1234567',
+            'name'  => '坤小',
+            'pass'  => '123123',
         ];
         //请求passport 登录接口
-        $url = 'http://passport.1905.com/api/user/login';
+        $url = 'http://passport.1905.com/user/login';
         $response = CommonModel::curlPost($url,$login_info);
         echo '<pre>';print_r($response);echo '</pre>';
     }
@@ -50,7 +50,7 @@ class IndexController extends Controller
         $token = '71d5593b8c290d8af64e';
         $uid = 11;
         //请求passport 获取数据接口
-        $url = 'http://passport.1905.com/api/show/time';
+        $url = 'http://passport.1905.com/user/info';
         $header = [
             'token:'.$token,
             'uid:'.$uid

@@ -47,7 +47,7 @@ class IndexController extends Controller
      */
     public function getData()
     {
-        $token = '34a0db5a3a73d1330d7d';
+        $token = 'e3b37b6fc643a5d5682b';
         $uid = 1;
         //请求passport 获取数据接口
         $url = 'http://passport.1905.com/user/info';
